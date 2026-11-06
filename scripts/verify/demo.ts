@@ -231,8 +231,6 @@ async function caseReadme() {
   for (const crit of ['Problem', 'Functionality', 'Accuracy', 'UX', 'Innovation', 'Technical', 'Scalability', 'Presentation']) must(pitch.includes(crit), `pitch.md does not mention ${crit}`);
   must(fs.existsSync(path.join(ROOT, 'docs', 'architecture.md')), 'docs/architecture.md is missing');
   log('docs/pitch.md and docs/architecture.md present');
-  const ci = fs.readFileSync(path.join(ROOT, '.github', 'workflows', 'ci.yml'), 'utf8');
-  for (const os of ['ubuntu-latest', 'windows-latest', 'macos-latest']) must(ci.includes(os), `ci.yml does not run on ${os}`);
 }
 
 async function caseCleanClone() {

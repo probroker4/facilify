@@ -35,7 +35,7 @@ async function caseA11y() {
   console.log('Testing accessibility and keyboard navigational structure...');
   const files = [
     'src/app/layout.tsx',
-    'src/app/page.tsx',
+    'src/app/(org)/page.tsx',
     'src/app/(org)/layout.tsx',
     'src/app/(org)/upload/page.tsx',
     'src/app/(org)/fix/page.tsx',

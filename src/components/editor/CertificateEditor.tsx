@@ -253,6 +253,19 @@ export function CertificateEditor({ template, onChange, sampleRows, placeholders
     return () => ctl.abort();
   }, [ref]);
 
+  useEffect(() => {
+    if (!sampling && !big) return;
+    const onEsc = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return;
+      const t = e.target as HTMLElement | null;
+      const typing = !!t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT' || t.isContentEditable);
+      if (sampling) setSampling(false);
+      else if (big && !typing) setBig(false);
+    };
+    window.addEventListener('keydown', onEsc);
+    return () => window.removeEventListener('keydown', onEsc);
+  }, [sampling, big]);
+
   function onKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
     const tag = (e.target as HTMLElement).tagName;
     const typing = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || (e.target as HTMLElement).isContentEditable;

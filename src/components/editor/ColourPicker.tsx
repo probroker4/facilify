@@ -60,6 +60,8 @@ export function ColourPicker({ value, onChange, palette, onSampleTemplate, sampl
   const hex = normalizeHex(value) ?? '#000000';
   const rgb = hexToRgb(hex);
   const hsl = hexToHsl(hex);
+  const latest = useRef(hex);
+  latest.current = hex;
   const [text, setText] = useState(hex);
   const [textBad, setTextBad] = useState(false);
   const [recent, setRecent] = useState<string[]>([]);
@@ -78,10 +80,11 @@ export function ColourPicker({ value, onChange, palette, onSampleTemplate, sampl
     setHasNative(typeof window !== 'undefined' && 'EyeDropper' in window);
   }, []);
 
-  const apply = (next: string) => { const n = normalizeHex(next); if (n) onChange(n); };
+  const apply = (next: string) => { const n = normalizeHex(next); if (n) { latest.current = n; onChange(n); } };
   const settle = (next: string) => {
     const n = normalizeHex(next);
     if (!n) return;
+    latest.current = n;
     onChange(n);
     setRecent(colourStore.addRecent(n));
     onCommit?.(n);
@@ -138,14 +141,14 @@ export function ColourPicker({ value, onChange, palette, onSampleTemplate, sampl
       {textBad && <p className="text-[11px] text-red-600" role="alert">Use a hex like #1f3a5f, or rgb(31, 58, 95), or hsl(214, 51%, 25%).</p>}
 
       <div className="grid grid-cols-3 gap-2" role="group" aria-label="RGB">
-        <Num label="R" testid="color-r" value={rgb.r} min={0} max={255} onCommit={(r) => settle(rgbToHex(r, rgb.g, rgb.b))} />
-        <Num label="G" testid="color-g" value={rgb.g} min={0} max={255} onCommit={(g) => settle(rgbToHex(rgb.r, g, rgb.b))} />
-        <Num label="B" testid="color-b" value={rgb.b} min={0} max={255} onCommit={(b) => settle(rgbToHex(rgb.r, rgb.g, b))} />
+        <Num label="R" testid="color-r" value={rgb.r} min={0} max={255} onCommit={(r) => { const c = hexToRgb(latest.current); settle(rgbToHex(r, c.g, c.b)); }} />
+        <Num label="G" testid="color-g" value={rgb.g} min={0} max={255} onCommit={(g) => { const c = hexToRgb(latest.current); settle(rgbToHex(c.r, g, c.b)); }} />
+        <Num label="B" testid="color-b" value={rgb.b} min={0} max={255} onCommit={(b) => { const c = hexToRgb(latest.current); settle(rgbToHex(c.r, c.g, b)); }} />
       </div>
       <div className="grid grid-cols-3 gap-2" role="group" aria-label="HSL">
-        <Num label="H" testid="color-h" value={hsl.h} min={0} max={359} onCommit={(h) => settle(hslToHex(h, hsl.s, hsl.l))} />
-        <Num label="S %" testid="color-s" value={hsl.s} min={0} max={100} onCommit={(s) => settle(hslToHex(hsl.h, s, hsl.l))} />
-        <Num label="L %" testid="color-l" value={hsl.l} min={0} max={100} onCommit={(l) => settle(hslToHex(hsl.h, hsl.s, l))} />
+        <Num label="H" testid="color-h" value={hsl.h} min={0} max={359} onCommit={(h) => { const c = hexToHsl(latest.current); settle(hslToHex(h, c.s, c.l)); }} />
+        <Num label="S %" testid="color-s" value={hsl.s} min={0} max={100} onCommit={(s) => { const c = hexToHsl(latest.current); settle(hslToHex(c.h, s, c.l)); }} />
+        <Num label="L %" testid="color-l" value={hsl.l} min={0} max={100} onCommit={(l) => { const c = hexToHsl(latest.current); settle(hslToHex(c.h, c.s, l)); }} />
       </div>
 
       <div className="flex flex-wrap gap-2">

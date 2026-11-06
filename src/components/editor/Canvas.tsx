@@ -77,6 +77,7 @@ export function Canvas(p: Props) {
     if (!p.sampling) { setHover(null); return; }
     let live = true;
     setSamplerError('');
+    setSampler(null);
     loadSampler(ref).then((s) => { if (live) setSampler(s); }).catch((e) => { if (live) setSamplerError(e instanceof Error ? e.message : 'Could not read the template.'); });
     return () => { live = false; };
   }, [p.sampling, ref]);

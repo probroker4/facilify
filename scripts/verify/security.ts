@@ -441,7 +441,7 @@ async function caseTokens() {
   const server = await startServer({
     port: PORT, distDir: DIST, dataDir: dir2,
     env: {
-      CERTFLOW_SECRET: SECRET, ORGANIZER_EMAILS: undefined, GOOGLE_CLIENT_ID: 'test-client.apps.googleusercontent.com', GOOGLE_CLIENT_SECRET: CLIENT_SECRET_SENTINEL,
+      CERTFLOW_SECRET: SECRET, ORGANIZER_EMAILS: undefined, CERTFLOW_OPEN_SIGNIN: '0', GOOGLE_CLIENT_ID: 'test-client.apps.googleusercontent.com', GOOGLE_CLIENT_SECRET: CLIENT_SECRET_SENTINEL,
       CERTFLOW_FAKE_GOOGLE_LOG: logFile, CERTFLOW_FAKE_REFRESH_TOKEN: REFRESH_SENTINEL, NODE_OPTIONS: `--import ${pathToFileURL(FAKE_GOOGLE).href}`,
     },
   });

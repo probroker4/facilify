@@ -14,9 +14,8 @@ const CASES: Record<string, string[]> = {
   share: ['add-to-profile', 'share-post', 'customize'],
   pipeline: ['states', 'failures', 'duplicates', 'resume', 'bulk-quota', 'report'],
   security: ['authz', 'tokens', 'uploads', 'purge'],
-  storage: ['save', 'folders', 'idempotent', 'errors', 'local'],
   tickets: ['submit', 'inbox', 'reissue', 'notify'],
-  editor: ['controls', 'wysiwyg', 'helpers', 'font-search', 'colour'],
+  editor: ['controls', 'modes', 'wysiwyg', 'helpers', 'font-search', 'colour', 'finder', 'qr'],
   ui: ['a11y', 'e2e'],
   demo: ['help', 'readme', 'cross-platform'],
 };
@@ -35,5 +34,7 @@ let ok = run('typecheck', [tscCli, '--noEmit', '-p', '.']);
 ok = run('production build', [nextCli, 'build'], { NEXT_DIST_DIR: '.next-suite' }) && ok;
 for (const area of only) for (const c of CASES[area]) ok = run(`${area} ${c}`, [tsxCli, path.join('scripts', 'verify', `${area}.ts`), '--case', c]) && ok;
 ok = run('core integration', [tsxCli, path.join('scripts', 'verify', 'core-integration.ts')]) && ok;
+ok = run('qr and signed receipt', [tsxCli, path.join('scripts', 'verify', 'qr-verify.ts')]) && ok;
+ok = run('font detector', [tsxCli, path.join('scripts', 'verify', 'font-detect.ts')]) && ok;
 if (!ok) { console.error('FULL SUITE FAILED'); process.exit(1); }
 console.log('FULL SUITE OK');

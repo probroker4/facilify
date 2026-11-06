@@ -894,7 +894,7 @@ async function caseFinder(): Promise<void> {
   await withPage('chromium', async (page) => {
     await openEditor(page);
     await page.setInputFiles(tid('background-upload'), { name: 'my-template.png', mimeType: 'image/png', buffer: png });
-    await page.waitForSelector(tid('background-status'), { timeout: 30_000 });
+    await page.waitForFunction(() => /Using/.test(document.querySelector('[data-testid="background-status"]')?.textContent || ''), null, { timeout: 30_000 });
     await fresh(page);
     await page.click(tid('open-font-finder'));
     await page.waitForSelector(tid('font-finder'));
