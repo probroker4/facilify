@@ -1,0 +1,8 @@
+Student ID,Name,Email,Award,Event
+ERR-01,Good Student,valid.student@college.edu,Participation,Fall Codefest
+ERR-02,,missing.name@college.edu,Participation,Fall Codefest
+ERR-03,Bad Email Person,not-an-email,Participation,Fall Codefest
+ERR-04,No Email Person,,Participation,Fall Codefest
+ERR-05,Duplicate Recipient,dupe@college.edu,1st Prize,Fall Codefest
+ERR-05,Duplicate Recipient,dupe@college.edu,1st Prize,Fall Codefest
+ERR-06,Valid Second Person,valid2@college.edu,2nd Prize,Fall Codefest

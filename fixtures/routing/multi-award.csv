@@ -1,0 +1,9 @@
+Name,Student ID,Email,Event,Award,Rank,Score,Date
+Priya Nair,P1,p1@example.edu,HackFest 2026,Participation,,,2026-03-14
+Priya Nair,P1,p1@example.edu,HackFest 2026,Best UI,,95,2026-03-14
+Priya Nair,P1,p1@example.edu,HackFest 2026,2nd Prize,2,70,2026-03-14
+Quinn Ortiz,Q1,q1@example.edu,HackFest 2026,Participation; Best UI,,50,2026-03-14
+Quinn Ortiz,Q1,q1@example.edu,HackFest 2026,Participation,,,2026-03-14
+Rae Chen,R1,r1@example.edu,HackFest 2026,Participation,,,2026-03-14
+Rae Chen,R1,r1@example.edu,HackFest 2026,participation,,,2026-03-14
+Sam Okafor,S1,s1@example.edu,HackFest 2026,2nd Prize,2,92,2026-03-14

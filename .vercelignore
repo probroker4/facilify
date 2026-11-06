@@ -1,0 +1,12 @@
+node_modules
+.next
+.next*
+data
+fixtures
+tests
+scripts
+.unlazy
+.claude
+.gemini
+test-results
+playwright-report

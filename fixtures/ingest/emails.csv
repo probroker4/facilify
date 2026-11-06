@@ -1,0 +1,8 @@
+Person Name,Student ID,Student Email,Personal Email,Event,Award,Date
+Ann,S1,ann@uni.edu,ann@gmail.com,HackFest,P,2026-03-15
+Ben,S2,,ben@gmail.com,HackFest,P,2026-03-15
+Cat,S3,cat(at)uni,cat@gmail.com,HackFest,P,2026-03-15
+Dan,S4,,,HackFest,P,2026-03-15
+Eve,S5,,eve@@gmail,HackFest,P,2026-03-15
+Fay,S6, mailto:Fay@Uni.edu ,,HackFest,P,2026-03-15
+Gus,S7,Gus Ho <gus@uni.edu>,gus@gmail.com,HackFest,P,2026-03-15

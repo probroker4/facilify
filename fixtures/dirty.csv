@@ -1,0 +1,17 @@
+Name,Email,Event,Award,Date
+Alice Johnson,alice.johnson@example.com,HackFest 2026,1st Prize,2026-03-14
+Bob Smith,bob.smith@example.com,HackFest 2026,2nd Prize,2026-03-14
+,missing.name1@example.com,HackFest 2026,Participation,2026-03-14
+   ,missing.name2@example.com,HackFest 2026,Participation,2026-03-14
+Charlie Brown,invalid-email-no-at,HackFest 2026,3rd Prize,2026-03-14
+Diana Prince,diana@,HackFest 2026,Honourable Mention,2026-03-14
+Evan Wright,@example.com,HackFest 2026,Participation,2026-03-14
+Fiona Gallagher,fiona with spaces@domain.com,HackFest 2026,Best UI,2026-03-14
+George Costanza,,HackFest 2026,Participation,2026-03-14
+Hannah Abbott,hannah@@doubleat.com,HackFest 2026,Participation,2026-03-14
+Ian Malcolm,ian.malcolm@example.com,HackFest 2026,Best Pitch,2026-03-14
+Ian Malcolm,ian.malcolm@example.com,HackFest 2026,Best Pitch,2026-03-14
+Julia Roberts,julia.roberts@example.com,HackFest 2026,Special Mention,2026-03-14
+Julia Roberts,julia.roberts@example.com,HackFest 2026,Special Mention,2026-03-14
+Kevin Bacon,kevin.bacon@example.com,HackFest 2026,Participation,2026-03-14
+Laura Croft,laura.croft@example.com,HackFest 2026,Participation,2026-03-14

@@ -1,0 +1,29 @@
+Name,Student ID,Email,Event,Award,Rank,Score,Track,Date
+Aarav Sharma,S001,s001@example.edu,HackFest 2026,1st Prize,1,96,AI,2026-03-14
+Aarav Sharma,S001,s001@example.edu,HackFest 2026,Best UI,,96,AI,2026-03-14
+Aarav Sharma,S001,s001@example.edu,HackFest 2026,Participation,,,AI,2026-03-14
+Diya Patel,S002,s002@example.edu,HackFest 2026,Second Prize,2,91,Web,2026-03-14
+Diya Patel,S002,s002@example.edu,HackFest 2026,Special Mention,,91,Web,2026-03-14
+Rohan Mehta,S003,s003@example.edu,HackFest 2026,3rd,3,84,AI,2026-03-14
+Rohan Mehta,S003,s003@example.edu,HackFest 2026,Honourable Mention,,84,AI,2026-03-14
+Ananya Iyer,S004,s004@example.edu,HackFest 2026,Best UI,,88,Web,2026-03-14
+Kabir Singh,S005,s005@example.edu,HackFest 2026,First Place,1,92,Web,2026-03-14
+Meera Nair,S006,s006@example.edu,HackFest 2026,Runner Up,2,89.5,AI,2026-03-14
+Vihaan Gupta,S007,s007@example.edu,HackFest 2026,3rd Prize,3,79,Mobile,2026-03-14
+Ishita Reddy,S008,s008@example.edu,HackFest 2026,Best Pitch,,77,Mobile,2026-03-14
+Arjun Krishnan,S009,s009@example.edu,HackFest 2026,Hon. Mention,,70,Web,2026-03-14
+Saanvi Joshi,S010,s010@example.edu,HackFest 2026,Honorable Mention,,72,AI,2026-03-14
+Elena Petrova,S011,s011@example.edu,HackFest 2026,Special Mention,,68,ML Vision,2026-03-14
+José Núñez,S012,s012@example.edu,HackFest 2026,Best Innovation,,90,ML Vision,2026-03-14
+अनन्या शर्मा,S013,s013@example.edu,HackFest 2026,Special Jury,,86,Web,2026-03-14
+Zoë O’Brien,S014,s014@example.edu,HackFest 2026,Mentor,,,Mentoring,2026-03-14
+Ünal Şahin,S015,s015@example.edu,HackFest 2026,Volunteer,,,Ops,2026-03-14
+Lakshmi Narayanan,S016,s016@example.edu,HackFest 2026,Winner,1,99,Mobile,2026-03-14
+Dev Malhotra,S017,s017@example.edu,HackFest 2026,HM,,65,Web,2026-03-14
+Riya Fernandes,S018,s018@example.edu,HackFest 2026,participation,,,Web,2026-03-14
+Aryan Bhatt,S019,s019@example.edu,HackFest 2026,Certificate of Participation,,,AI,2026-03-14
+Yash Agarwal,S020,s020@example.edu,HackFest 2026,PARTICIPATION,,,Web,2026-03-14
+Harsh Chauhan,S021,s021@example.edu,HackFest 2026,Participation,,,Web,2026-03-14
+Tanvi Kulkarni,S022,s022@example.edu,HackFest 2026,1st,1,94,AI,2026-03-14
+Nisha Bansal,S023,s023@example.edu,HackFest 2026,Best Pitch,,81,Web,2026-03-14
+Rahul Desai,S024,s024@example.edu,HackFest 2026,2nd,2,87,Mobile,2026-03-14
